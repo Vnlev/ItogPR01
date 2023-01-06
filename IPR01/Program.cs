@@ -11,5 +11,19 @@ string[] ReadArray(string message)
     return Console.ReadLine().Split();
 }
 
+string[] RemoveBigStrings(string[] arr, int k)
+{
+    string[] res = new string[arr.Length];
+    int j = 0;
+    for (int i = 0; i < arr.Length; ++i)
+    {
+        if (arr[i].Length <= k)
+        {
+            res[j++] = arr[i];
+        }
+    }
+    Array.Clear(res, j, res.Length - j);
+    return res;
+}
 
 string[] arr = ReadArray("Вводите массив в одной строке");
