@@ -26,4 +26,15 @@ string[] RemoveBigStrings(string[] arr, int k)
     return res;
 }
 
+void PrintArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; ++i)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+    Console.WriteLine();
+}
+
 string[] arr = ReadArray("Вводите массив в одной строке");
+
+PrintArray(RemoveBigStrings(arr, 3));
